@@ -117,7 +117,8 @@ a:hover {
   }
 }
 .multi-column .cv-item {
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
+  margin-bottom: 0px;
 }
 @media (min-width: 992px) {
   .multi-column .cv-item {
