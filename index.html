@@ -171,11 +171,12 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           <div class="cv-item">
             <div class='container' style="width: 100%;">
               <div class='row'>
-                <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;">
+                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
+                <div class='col-md-3' style="padding-left: 0px;">
                   <img src="media/img/sybil.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
                 </div>
                 <div class='col-md-9'>
-                  <h3>SuperResolution을 이용한 Sybil Detection</h3>
+                  <h3>SuperResolution을 이용한 User classification</h3>
                   <h4>팀 프로젝트(학과) / 4개월 / <a href="https://github.com/lubiksss/SR_applied_SybilDetection"
                       target="_blank">github</a>
                   </h4>
@@ -223,23 +224,53 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           <div class="cv-item">
             <div class='container' style="width: 100%;">
               <div class='row'>
-                <div class='col-md-3' style="padding-left: 0px; text-align: center;">
+                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
+                <div class='col-md-3' style="padding-left: 0px;">
                   <img src="media/img/awp.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
                 </div>
                 <div class='col-md-9'>
-                  <h3>RF를 통한 경기순환시계 예측, 투자 모델 생성</h3>
+                  <h3>RF를 통한 경기순환시계 예측, 투자 모델 제안</h3>
                   <h4>팀 프로젝트(공모전) / 6개월 / <a href="https://github.com/lubiksss/AWP_using_RF" target="_blank">github</a>
                   </h4>
                   <br />
-                  <p>과거 자료를 통해 경기순환시계의 지표를 예측하고 예측한 값을 사용하여 해당 국면을 분류했습니다. 분류된 국면을 토대로 백테스팅을 통해 국면별 최적의 자산군별 비중을
-                    계산합니다. 미래의 국면을 예측하고 고객의 성향을 분석해 적절한 고객에게 최적의 비중을 가지는 포트폴리오를 제시합니다.</p>
                   <p>
                   <ul>
-                    <li>경기순환시계의 경제지표들의 좌표를 크롤링</li>
-                    <li>Random Forest model을 통해 과거 12개월 데이터로부터 1달 후의 데이터를 예측</li>
-                    <li>K-means clustering을 통해 해당월의 국면을 분류</li>
+                    문제점
+                    <li>
+                      기존 AWP는 경기 국면에 상관없이 포트폴리오가 자산을 방어하기 위해 고정된 비중을 가지기 때문에 하락 국면에서는 자산을 지킬 수 있지만 상승 국면에서는 자산을 불리기 힘들다는
+                      단점을 가집니다.
+                    </li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    해결책
+                    <li>
+                      1. 경기 국면에 따라서 포트폴리오 비중을 바꾸는 진화된 AWP모델을 만들자는 아이디어를 제시했습니다.
+                    </li>
+                    <li>
+                      과거 자료를 통해 경기순환시계의 지표를 예측하고 예측한 값을 사용하여 해당 국면을 분류했습니다. 분류된 국면을 토대로 백테스팅을 통해 국면별 최적의 자산군 비중을 계산합니다.
+                    </li>
+                    <li>
+                      미래의 국면을 예측하고 고객의 성향을 분석해 적절한 고객에게 최적의 비중을 가지는 포트폴리오를 제시했습니다.
+                    </li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    수행한 것
+                    <li>경기순환시계의 경제지표 좌표를 크롬과 JavaScript를 사용하여 크롤링</li>
+                    <li>RandomForest model을 통해 과거 12개월 데이터로부터 1달 후의 데이터를 예측</li>
+                    <li>K-means clustering을 통해 해당 월의 경기 국면을 분류</li>
                     <li>분류를 토대로 기간을 나누고 Search algorithm을 통해 국면별 최적 비중을 계산</li>
                     <li>고객데이터를 분석해 타겟을 선정하고 미래의 국면을 예측하여 최적의 포트폴리오를 제시</li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    배운 것
+                    <li>Python 입출력, Pandas 모듈을 활용한 데이터 전처리 및 분석</li>
+                    <li>Python 머신러닝 모듈 Sklearn을 활용한 RandomForest, K-means clustering 활용</li>
                   </ul>
                   </p>
                 </div>
@@ -250,7 +281,8 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           <div class="cv-item">
             <div class='container' style="width: 100%;">
               <div class='row'>
-                <div class='col-md-3' style="padding-left: 0px;text-align: center;">
+                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
+                <div class='col-md-3' style="padding-left: 0px;">
                   <img src="media/img/game.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
                 </div>
                 <div class='col-md-9'>
@@ -258,11 +290,14 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                   <h4>개인 프로젝트 / 6개월 / <a href="https://github.com/lubiksss/ShootingGame" target="_blank">github</a>
                   </h4>
                   <br />
-                  <p>스테이지가 있고, Player와 Enemy, Boss가 등장하는 일반적인 슈팅 게임을 모작하였습니다. 게임을 기획하고 게임 로직을 Unity와 C#을 통하여 구현하였으며, 게임
-                    내
-                    UI도 구현하였습니다.</p>
+
+                  <p>
+                    스테이지와 Player, Enemy, Boss가 등장하는 일반적인 슈팅 게임을 모작하였습니다. 게임을 기획하고 게임 로직을 Unity와 C#을 통하여 구현하였으며, 게임 내 UI도
+                    구현하였습니다.
+                  </p>
                   <p>
                   <ul>
+                    수행한 것
                     <li>Player 구현 (Move, Fire, Boom, 다른 객체와의 충돌 등)</li>
                     <li>Enemy 구현 (Move, Fire, 다른 객체와의 충돌 등)</li>
                     <li>Boss 구현 (랜덤을 활용한 4가지 패턴)</li>
@@ -270,10 +305,22 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <li>ObjectManager 구현 (ObjectPooling을 통한 관리)</li>
                   </ul>
                   </p>
+                  <p>
+                  <ul>
+                    배운 것
+                    <li>C#의 기본적인 문법과 객체지향프로그래밍의 개념</li>
+                    <li>Unity를 활용한 객체 간 참조, 컴포넌트 참조 등의 Unity 플랫폼 사용법</li>
+                    <li>디자인패턴(ObjectPool, Singleton)</li>
+                  </ul>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+
+
+
+
 
         </div>
       </div>
@@ -309,7 +356,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
   <!-- #page -->
 
   <!-- prod -->
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script
     type="text/javascript">window.jQuery || document.write('<script src="vendor/jquery/jquery-2.1.3.min.js"><\/script>')</script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -323,7 +370,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
     src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
   <script type="text/javascript" src="js/demo.js"></script>
   <script type="text/javascript" src="js/vendor.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/script.js"></script> -->
 
   <!-- dev -->
   <!--
