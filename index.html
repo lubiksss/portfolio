@@ -185,8 +185,11 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                   <ul>
                     문제점
                     <li>
-                      기존 논문의 image를 활용하여 User classification을 하는 방법은 업로드되는 대부분의 이미지가 화질이 안 좋은 다크넷에서 효율적이지 않을 것이라고
+                      기존 논문의 이미지를 활용하여 User classification을 하는 방법은 업로드되는 대부분의 이미지가 화질이 안 좋은 다크넷에서 효율적이지 않을 것이라고
                       판단했습니다.
+                    </li>
+                    <li>
+                      특히 이미지 속의 글씨나, 판매자의 워터마크는 화질이 안 좋을 경우 잘못 해석될 위험이 있습니다.
                     </li>
                   </ul>
                   </p>
@@ -194,7 +197,8 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                   <ul>
                     해결책
                     <li>
-                      SuerResolution 모델을 사용하여 화질을 향상하고 이를 classification model에 학습시켜 User classification의 성능을 높이고자 했습니다.
+                      SuerResolution 모델을 사용하여 이미지 화질을 향상하고 이를 classification model에 학습시켜 User classification의 성능을 높이고자
+                      했습니다.
                     </li>
                   </ul>
                   </p>
@@ -206,7 +210,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <li>SRCNN 모델을 통한 이미지 SuperResolution 수행</li>
                     <li>크롤링한 판매자 정보, 특정 조건에 따른 이미지 분류 (머신러닝용 데이터 세트 생성)</li>
                     <li>RESNET18 모델을 학습시키고 User classification 수행</li>
-                    <li>기존 논문과 결과와 SR을 적용한 모델의 결과 비교 분석</li>
+                    <li>기존 논문과 결과와 SuperResolution을 적용한 모델의 결과 비교 분석</li>
                   </ul>
                   </p>
                   <p>
@@ -246,7 +250,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                   <ul>
                     해결책
                     <li>
-                      1. 경기 국면에 따라서 포트폴리오 비중을 바꾸는 진화된 AWP모델을 만들자는 아이디어를 제시했습니다.
+                      경기 국면에 따라서 포트폴리오 비중을 바꾸는 진화된 AWP모델을 만들자는 아이디어를 제시했습니다.
                     </li>
                     <li>
                       과거 자료를 통해 경기순환시계의 지표를 예측하고 예측한 값을 사용하여 해당 국면을 분류했습니다. 분류된 국면을 토대로 백테스팅을 통해 국면별 최적의 자산군 비중을 계산합니다.
