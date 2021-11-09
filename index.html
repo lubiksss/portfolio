@@ -174,6 +174,73 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           <h2>Portfolio</h2>
         </div>
         <div class="col-md-10">
+          
+          <div class="cv-item">
+            <div class='container' style="width: 100%;">
+              <div class='row'>
+                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
+                <div class='col-md-3' style="padding-left: 0px;">
+                  <img src="media/img/awp.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
+                </div>
+                <div class='col-md-9'>
+                  <h3>경기순환 시계 예측을 통한 최적 자산 비중의 AWP모델 제안</h3>
+                  <h4>팀 프로젝트(공모전) / 6개월 / <a href="https://github.com/lubiksss/AWP_using_RF" target="_blank">github</a>
+                  </h4>
+                  <br />
+                  <p>
+                  <ul>
+                    <b style="font-size: 1.2em;">문제점</b>
+                    <li>
+                      주식, 채권, 원자재, 금으로 구성된 All Weather Portfolio(AWP)는 경기 국면에 무관하게 수익을 낼 수 있는 자산을 보유한다는 장점이 있지만 고정된 비중으로
+                      투자하기 때문에 수동적인 포트폴리오라는 단점이 존재
+                    </li>
+                    <li>
+                      AWP는 미국에서 시작된 포트폴리오이기 때문에 한국의 상품을 기준으로 고객에 따라 커스터마이징된 포트폴리오는 없음
+                    </li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    <b style="font-size: 1.2em;">해결책</b>
+                    <li>
+                      경기순환시계 지표를 통해 4가지 국면(상승, 하강, 둔화, 회복)을 분류하고 다음 달의 국면을 예측하는 모델을 설계하여 이를 기반으로 포트폴리오의 국면별 최적 자산 비중 산출
+                    </li>
+                    <li>
+                      고객데이터를 기반으로 타겟 고객을 선정하고 고객별 위험 선호도, 자산 선호도, 시가총액 선호도를 기반으로 ETF로 구성된 AWP를 제안
+                    </li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    <b style="font-size: 1.2em;">수행한 것</b>
+                    <li>통계청의 경기순환시계의 경제지표 좌표를 크롤링</li>
+                    <li>RandomForest Linear Regression model을 통해 과거 12개월 경기순환시계 좌표 데이터로부터 1달 후의 데이터를 예측</li>
+                    <li>K-means clustering을 통해 해당 월의 경기 국면을 분류</li>
+                    <li>클러스터링 된 경기 국면을 토대로 기간을 4개로 나눈 후 Search algorithm을 통해 국면별 포트폴리오 최적 자산 비중을 계산</li>
+                    <li>고객데이터를 통해 AWP 포트폴리오 타겟 고객을 선정하고 타겟 고객의 선호도를 분석하여 포트폴리오 구성 ETF와 자산 비중 제안</li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    <b style="font-size: 1.2em;">수행 결과</b>
+                    <li>기존 AWP모델 수익률의 약 3배 수익률을 가지는 투자모델 생성</li>
+                    <li>공모전에 입상하진 못했지만, pandas, sklearn등 유명 라이브러리 학습</li>
+                  </ul>
+                  </p>
+                  <p>
+                  <ul>
+                    <b style="font-size: 1.2em;">배운 것</b>
+                    <li>크롬 개발자도구와 JavaScript를 활용한 웹 크롤링</li>
+                    <li>Python 입출력, Pandas 모듈을 활용한 데이터 전처리 및 분석</li>
+                    <li>Python 머신러닝 모듈 Sklearn을 활용한 RandomForest, K-means clustering 활용</li>
+                  </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
           <div class="cv-item">
             <div class='container' style="width: 100%;">
               <div class='row'>
@@ -239,70 +306,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
             </div>
           </div>
 
-          <div class="cv-item">
-            <div class='container' style="width: 100%;">
-              <div class='row'>
-                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
-                <div class='col-md-3' style="padding-left: 0px;">
-                  <img src="media/img/awp.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
-                </div>
-                <div class='col-md-9'>
-                  <h3>경기순환 시계 예측을 통한 최적 자산 비중의 AWP모델 제안</h3>
-                  <h4>팀 프로젝트(공모전) / 6개월 / <a href="https://github.com/lubiksss/AWP_using_RF" target="_blank">github</a>
-                  </h4>
-                  <br />
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">문제점</b>
-                    <li>
-                      주식, 채권, 원자재, 금으로 구성된 All Weather Portfolio(AWP)는 경기 국면에 무관하게 수익을 낼 수 있는 자산을 보유한다는 장점이 있지만 고정된 비중으로
-                      투자하기 때문에 수동적인 포트폴리오라는 단점이 존재
-                    </li>
-                    <li>
-                      AWP는 미국에서 시작된 포트폴리오이기 때문에 한국의 상품을 기준으로 고객에 따라 커스터마이징된 포트폴리오는 없음
-                    </li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">해결책</b>
-                    <li>
-                      경기순환시계 지표를 통해 4가지 국면(상승, 하강, 둔화, 회복)을 분류하고 다음 달의 국면을 예측하는 모델을 설계하여 이를 기반으로 포트폴리오의 국면별 최적 자산 비중 산출
-                    </li>
-                    <li>
-                      고객데이터를 기반으로 타겟 고객을 선정하고 고객별 위험 선호도, 자산 선호도, 시가총액 선호도를 기반으로 ETF로 구성된 AWP를 제안
-                    </li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행한 것</b>
-                    <li>통계청의 경기순환시계의 경제지표 좌표를 크롤링</li>
-                    <li>RandomForest Linear Regression model을 통해 과거 12개월 경기순환시계 좌표 데이터로부터 1달 후의 데이터를 예측</li>
-                    <li>K-means clustering을 통해 해당 월의 경기 국면을 분류</li>
-                    <li>클러스터링 된 경기 국면을 토대로 기간을 4개로 나눈 후 Search algorithm을 통해 국면별 포트폴리오 최적 자산 비중을 계산</li>
-                    <li>고객데이터를 통해 AWP 포트폴리오 타겟 고객을 선정하고 타겟 고객의 선호도를 분석하여 포트폴리오 구성 ETF와 자산 비중 제안</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행 결과</b>
-                    <li>기존 AWP모델 수익률의 약 3배 수익률을 가지는 투자모델 생성</li>
-                    <li>공모전에 입상하진 못했지만, pandas, sklearn등 유명 라이브러리 학습</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">배운 것</b>
-                    <li>크롬 개발자도구와 JavaScript를 활용한 웹 크롤링</li>
-                    <li>Python 입출력, Pandas 모듈을 활용한 데이터 전처리 및 분석</li>
-                    <li>Python 머신러닝 모듈 Sklearn을 활용한 RandomForest, K-means clustering 활용</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           <div class="cv-item">
             <div class='container' style="width: 100%;">
