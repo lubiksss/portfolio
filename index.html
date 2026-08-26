@@ -20,6 +20,31 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/themes/themes.css">
   <link rel="stylesheet" href="css/demo.css">
+  <!-- Projects section - system detail tables -->
+  <style type="text/css">
+    #content a.ext { color: #1a0dab; text-decoration: underline;
+      -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none; }
+    #content a.ext:hover { color: #1a0dab !important; text-decoration: underline; }
+    .sys-detail h3 { margin-bottom: 12px; }
+    .sys-detail p { line-height: 1.7; }
+    .sys-detail table { width: 100%; font-size: 13px; border-collapse: collapse; }
+    .sys-detail .table-scroll { overflow-x: auto; margin-bottom: 24px; }
+    .sys-detail .sys-spec { max-width: 680px; margin-bottom: 20px; }
+    .sys-detail .sys-spec th, .sys-detail .sys-spec td { border: 1px solid #e0e0e0;
+      padding: 7px 12px; vertical-align: top; text-align: left; }
+    .sys-detail .sys-spec th { width: 104px; background: #fafafa;
+      font-weight: 600; color: #616161; white-space: nowrap; }
+    .sys-detail .sys-mod { min-width: 760px; }
+    .sys-detail .sys-mod th, .sys-detail .sys-mod td { border: 1px solid #e0e0e0;
+      padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    .sys-detail .sys-mod thead th { background: #fafafa;
+      font-weight: 600; color: #616161; white-space: nowrap; }
+    .sys-detail .sys-mod td:first-child { font-weight: 600; white-space: nowrap; }
+    @media print {
+      .sys-detail .table-scroll { overflow: visible; }
+      .sys-detail .sys-mod { min-width: 0; font-size: 10px; }
+    }
+  </style>
   <!-- dev -->
   <!--
 <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
@@ -63,8 +88,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           <div class="contact-info">
             <p>
               Email: lubiksss@gmail.com<br />
-              Phone: 010-8827-3865<br />
-              Web: <a href="https://lubiksss.github.io/" target="_blank">https://lubiksss.github.io/</a>
+              Phone: 010-8827-3865
             </p>
           </div>
         </div>
@@ -116,253 +140,335 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
             <br />
             <p>내용 무</p>
           </div> -->
+          <div class="cv-item">
+            <h3>프리랜서 개발 (크몽)</h3>
+            <h4>2022.10 - 2023.03 / <a class="ext" href="https://kmong.com/@lubiksss1" target="_blank">크몽 프로필</a>
+            </h4>
+            <!-- <br /> -->
+            <p>
+            <ul>
+              <li>웹 데이터 수집 파이프라인 구축 의뢰 38건 수행, 만족도 100%, 리뷰 31건 평점 5.0</li>
+              <li>수집 런타임·관리 UI·CLI·배포를 템플릿화하고 의뢰별로 파생시켜 구축 기간 단축</li>
+              <li>대상별 수집 난이도(로그인, 동적 렌더링, 페이지네이션, 레이트 리밋)에 맞춘 수집 전략 구현</li>
+            </ul>
+            </p>
+          </div>
+          <div class="cv-item">
+            <h3>카카오 광고추천플랫폼트라이브</h3>
+            <h4>2021.11 - 현재
+            </h4>
+            <!-- <br /> -->
+            <p>
+            <ul>
+              <li>광고 경매의 반응률(pctr) 예측을 뒷받침하는 MLOps 피처 스토어·데이터 파이프라인 개발·운영</li>
+              <li>피처 스토어, 스트림 엔리처, 지표 파이프라인, 자동입찰 집계 파이프라인 4개 시스템 설계·구현</li>
+              <li>최대 100k/s · 500MB/s 스트림, 하루 30억 row · 10TB 규모 로그 처리</li>
+            </ul>
+            </p>
+          </div>
         </div>
       </div>
       <!-- .content - work experience -->
       <div class="content cv-section">
         <div class="col-md-2">
-          <h2>Skills &amp; Tools</h2>
+          <h2>Main Projects</h2>
         </div>
-        <div class="col-md-10">
-          <div class='container' style="width: 100%;">
-            <div class='row'>
-              <div class='col' style="padding-left : 0px">
-                <div class="cv-item">
-                  <h3>Python</h3>
-                  <p class="welcome">3년 / 프로그래밍, 인공지능, 머신러닝 관련 코딩</p>
-                  <!-- <p>프로그래밍, 인공지능, 머신러닝 관련 코딩</p> -->
-                </div>
-                <div class="cv-item">
-                  <h3>C#</h3>
-                  <p class="welcome">6개월 / Unity를 사용한 게임개발</p>
-                  <!-- <p>Unity를 사용한 게임개발</p> -->
-                </div>
-                <!-- <div class="cv-item">
-                  <h3>HTML &amp; CSS</h3>
-                  <p class="welcome">12개월 / 개인 블로그 운영</p>
-                  <p>개인 블로그 운영</p>
-                </div> -->
-              </div>
-
-              <div class='col'>
-                <!-- <div class="cv-item">
-                  <h3>Visual Studio Code</h3>
-                  <p class="welcome">2년 / 프로그래밍, 인공지능, 머신러닝 관련 코딩</p>
-                  <p>프로그래밍, 인공지능, 머신러닝 관련 코딩</p>
-                </div> -->
-                <div class="cv-item">
-                  <h3>HTML &amp; CSS</h3>
-                  <p class="welcome">12개월 / HTML로 제작한 개인 블로그 운영</p>
-                  <!-- <p>개인 블로그 운영</p> -->
-                </div>
-                <div class="cv-item">
-                  <h3>Unity</h3>
-                  <p class="welcome">6개월 / 개인 프로젝트 게임 개발</p>
-                  <!-- <p>개인 프로젝트 게임 개발</p> -->
-                </div>
-              </div>
-
+        <div class="col-md-10 sys-detail">
+          <div class="cv-item">
+            <h3>피처 스토어</h3>
+            <p>
+            <ul>
+              <li>ML 학습·추론용 피처의 생성·적재·서빙을 담당하는 실시간 피처 스토어의 전 모듈 설계·구현</li>
+              <li>피처 카탈로그·라이프사이클·파티션 좌표를 포괄하는 도메인 모델 및 메타 스키마 설계</li>
+              <li>카탈로그·라이프사이클을 소유하는 컨트롤 플레인과, 주입된 명세만으로 동작하는 무상태 실행기로 분리</li>
+              <li>코드 배포 없이 메타 등록만으로 피처 추가</li>
+              <li>gRPC 피처 서빙 평균 300k rps, 응답 10ms 내외</li>
+              <li>데이터베이스 관리 방법 관련 특허 출원 1건 (2026)</li>
+            </ul>
+            </p>
+            <table class="sys-spec">
+              <tr><th>목적</th><td>ML 학습·추론용 피처의 생성·적재·서빙 및 라이프사이클 관리</td></tr>
+              <tr><th>기술스택</th><td>Go, Kotlin, TypeScript, Spark, Kafka, Redis, MySQL, Hive, gRPC</td></tr>
+              <tr><th>인풋</th><td>하둡 파일 (최대 1억 row, ~100GB), Kafka 스트림, gRPC 요청 (평균 300k rps)</td></tr>
+              <tr><th>아웃풋</th><td>Redis Cluster, Kafka 스트림, gRPC 응답</td></tr>
+              <tr><th>특이사항</th><td>컨트롤 플레인·실행기 분리, 상태머신 기반 라이프사이클, 네이티브 윈도우 집계, 스펙 주도 개발</td></tr>
+            </table>
+            <div class="table-scroll">
+              <table class="sys-mod">
+                <thead>
+                  <tr>
+                    <th>모듈</th><th>목적</th><th>인풋</th><th>언어·프레임워크</th><th>ETL</th><th>아웃풋</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>컨트롤 플레인</td>
+                    <td>카탈로그·라이프사이클 SSOT, 잡 오케스트레이션, 스케줄 발화</td>
+                    <td>운영자·클라이언트 요청, 실행 결과 콜백</td>
+                    <td>Go, Echo</td>
+                    <td>상태머신 전이, 잡 명세 조립</td>
+                    <td>K8s Job, MySQL</td>
+                  </tr>
+                  <tr>
+                    <td>배치 실행기</td>
+                    <td>주입된 명세로 피처 생성·적재·검증·정합성 검사 수행</td>
+                    <td>잡 명세 JSON, 하둡 파일 최대 1억 row</td>
+                    <td>Kotlin, Spark</td>
+                    <td>도메인 로직, 조인, 스키마·정합성 검증</td>
+                    <td>하둡 파일, Kafka</td>
+                  </tr>
+                  <tr>
+                    <td>스트림 실행기</td>
+                    <td>Kafka 이벤트의 윈도우 집계로 실시간 피처 생성</td>
+                    <td>Kafka 스트림, 기존 집계 상태</td>
+                    <td>Kotlin</td>
+                    <td>JsonPath 파싱, 네이티브 윈도우 집계, 키 샤딩</td>
+                    <td>KV 스토어, Kafka</td>
+                  </tr>
+                  <tr>
+                    <td>운영 콘솔</td>
+                    <td>메타 등록·조회 UI, 권한별 화면 분기</td>
+                    <td>컨트롤 플레인 REST API</td>
+                    <td>TypeScript, Next.js</td>
+                    <td>권한 기반 화면 분기, 대시보드 임베드</td>
+                    <td>웹 UI</td>
+                  </tr>
+                  <tr>
+                    <td>KV 싱커</td>
+                    <td>피처 변경분을 서빙 스토어에 반영</td>
+                    <td>Kafka ~200k/s</td>
+                    <td>Go</td>
+                    <td>도메인 로직</td>
+                    <td>Redis Cluster</td>
+                  </tr>
+                  <tr>
+                    <td>피처 서버</td>
+                    <td>추론 서버에 gRPC 피처 서빙</td>
+                    <td>gRPC 평균 300k rps, Redis Cluster</td>
+                    <td>Kotlin, gRPC</td>
+                    <td>요청 검증, 키 조립, 벌크 중복 제거</td>
+                    <td>gRPC 응답</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
         </div>
       </div>
-      <!-- .content - technical skills & Tools-->
-
+      <!-- .content - main projects -->
       <div class="content cv-section">
         <div class="col-md-2">
-          <h2>Portfolio</h2>
+          <h2>Projects</h2>
         </div>
-        <div class="col-md-10">
-          
+        <div class="col-md-10 sys-detail">
+
           <div class="cv-item">
-            <div class='container' style="width: 100%;">
-              <div class='row'>
-                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
-                <div class='col-md-3' style="padding-left: 0px;">
-                  <img src="media/img/awp.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
-                </div>
-                <div class='col-md-9'>
-                  <h3>경기순환 시계 예측을 통한 최적 자산 비중의 AWP모델 제안</h3>
-                  <h4>팀 프로젝트(공모전) / 6개월 / <a href="https://github.com/lubiksss/AWP_using_RF" target="_blank">github</a>
-                  </h4>
-                  <br />
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">문제점</b>
-                    <li>
-                      주식, 채권, 원자재, 금으로 구성된 All Weather Portfolio(AWP)는 경기 국면에 무관하게 수익을 낼 수 있는 자산을 보유한다는 장점이 있지만 고정된 비중으로
-                      투자하기 때문에 수동적인 포트폴리오라는 단점이 존재
-                    </li>
-                    <li>
-                      AWP는 미국에서 시작된 포트폴리오이기 때문에 한국의 상품을 기준으로 고객에 따라 커스터마이징된 포트폴리오는 없음
-                    </li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">해결책</b>
-                    <li>
-                      경기순환시계 지표를 통해 4가지 국면(상승, 하강, 둔화, 회복)을 분류하고 다음 달의 국면을 예측하는 모델을 설계하여 이를 기반으로 포트폴리오의 국면별 최적 자산 비중 산출
-                    </li>
-                    <li>
-                      고객데이터를 기반으로 타겟 고객을 선정하고 고객별 위험 선호도, 자산 선호도, 시가총액 선호도를 기반으로 ETF로 구성된 AWP를 제안
-                    </li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행한 것</b>
-                    <li>통계청의 경기순환시계의 경제지표 좌표를 크롤링</li>
-                    <li>RandomForest Linear Regression model을 통해 과거 12개월 경기순환시계 좌표 데이터로부터 1달 후의 데이터를 예측</li>
-                    <li>K-means clustering을 통해 해당 월의 경기 국면을 분류</li>
-                    <li>클러스터링 된 경기 국면을 토대로 기간을 4개로 나눈 후 Search algorithm을 통해 국면별 포트폴리오 최적 자산 비중을 계산</li>
-                    <li>고객데이터를 통해 AWP 포트폴리오 타겟 고객을 선정하고 타겟 고객의 선호도를 분석하여 포트폴리오 구성 ETF와 자산 비중 제안</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행 결과</b>
-                    <li>기존 AWP모델 수익률의 약 3배 수익률을 가지는 투자모델 생성</li>
-                    <li>공모전에 입상하진 못했지만, pandas, sklearn등 유명 라이브러리 학습</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">배운 것</b>
-                    <li>크롬 개발자도구와 JavaScript를 활용한 웹 크롤링</li>
-                    <li>Python 입출력, Pandas 모듈을 활용한 데이터 전처리 및 분석</li>
-                    <li>Python 머신러닝 모듈 Sklearn을 활용한 RandomForest, K-means clustering 활용</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-          <div class="cv-item">
-            <div class='container' style="width: 100%;">
-              <div class='row'>
-                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
-                <div class='col-md-3' style="padding-left: 0px;">
-                  <img src="media/img/sybil.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
-                </div>
-                <div class='col-md-9'>
-                  <h3>Super-Resolution을 이용한 다크넷 Sybil detection tool 생성</h3>
-                  <h4>팀 프로젝트(학과) / 4개월 / <a href="https://github.com/lubiksss/SR_applied_SybilDetection"
-                      target="_blank">github</a>
-                  </h4>
-                  <br />
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">문제점</b>
-                    <li>
-                      익명성이 높은 다크넷 마켓의 다중계정 문제로 인한 유저 파악의 어려움
-                    </li>
-                    <li>
-                      Photograph style analysis를 활용한 유저 분류를 사용할 때 다크넷 마켓에 업로드된 저화질 이미지로 인하여 기존 분류 모델의 성능이 떨어질 것으로 예측
-                    </li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">해결책</b>
-                    <li>Pre-trained DNN 모델을 다크넷 이미지로 Fine-tuning하여 User classification
-                    </li>
-                    <li>Super-Resolution 모델을 사용, 다크넷 이미지의 화질 향상 후 DNN 모델을 이용하여 학습
-                    </li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행한 것</b>
-                    <li>크롤링 된 다크넷 데이터에서 이미지를 추출, 유저별로 분류하는 Pre-processing 과정을 통해 Input dataset 생성</li>
-                    <li>ResNet모델에 다크넷 dataset을 넣고 학습시킨 You are your photographs 논문 구현</li>
-                    <li>SRCNN(Image Super-Resolution Using Deep Convolutional Networks) 논문을 구현하여 Super-Resolution을 통한
-                      이미지 화질 향상</li>
-                    <li>Super-Resolution을 적용한 다크넷 이미지를 ResNet의 Fine-tuning dataset으로 사용 후 학습</li>
-                    <li>기존 논문과 Super-Resolution을 적용한 DNN 모델 간의 User classification 정확도 비교</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행 결과</b>
-                    <li>기존논문과 이미지의 화질을 개선한 모델의 정확도 차이가 크지 않았음</li>
-                    <li>원인은 SRCNN모델이 이미지를 기반으로 학습했기 때문으로 예측 (실제 매뉴얼한 조사 결과 이미지 영역은 화질이 향상되었으나 텍스트 영역은 화질이 향상되지 않음을 확인)
-                    </li>
-                    <li>이미지 영역과 텍스트 영역을 구분하여 두 부분 모두 화질을 향상할 수 있는 SRCNN모델을 적용하기 위한 실험 계획 수립</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">배운 것</b>
-                    <li>Python의 입출력, 정규표현식 모듈을 활용한 데이터 전처리 및 분석</li>
-                    <li>Python의 딥러닝 모듈 Pytorch를 활용한 SRCNN, RESNET모델 구현, 실험</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
+            <h3>스트림 엔리처</h3>
+            <p>
+            <ul>
+              <li>노출 시점 피처를 버저닝해 시계열 스토어에 선적재</li>
+              <li>클릭이 노출보다 늦게 도착하는 사이 피처가 갱신·소멸, 선적재로 학습·추론 간 피처 시점 일치 보장</li>
+              <li>조회 부하 절감을 위한 실시간 피처 캐싱, 스트림 조인은 네이티브 처리</li>
+            </ul>
+            </p>
+            <table class="sys-spec">
+              <tr><th>목적</th><td>노출·클릭·전환 로그에 실시간으로 피처를 엔리칭해 학습·추론에 제공</td></tr>
+              <tr><th>기술스택</th><td>Kotlin, Kafka, Cassandra, Redis</td></tr>
+              <tr><th>인풋</th><td>노출·클릭·전환 Kafka 스트림 (최대 ~100k/s, 500MB/s), Redis</td></tr>
+              <tr><th>아웃풋</th><td>Redis, Cassandra</td></tr>
+              <tr><th>특이사항</th><td>실시간 피처 캐싱, 네이티브 조인, 피처 버저닝</td></tr>
+            </table>
+            <div class="table-scroll">
+              <table class="sys-mod">
+                <thead>
+                  <tr>
+                    <th>모듈</th><th>목적</th><th>인풋</th><th>언어·프레임워크</th><th>ETL</th><th>아웃풋</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>엔리처</td>
+                    <td>노출 시점 피처를 결합해 버저닝 저장</td>
+                    <td>Kafka ~100k/s, 500MB/s, Redis</td>
+                    <td>Kotlin</td>
+                    <td>캐싱, 조인, 싱킹, 로깅</td>
+                    <td>Cassandra</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
-          
-
           <div class="cv-item">
-            <div class='container' style="width: 100%;">
-              <div class='row'>
-                <!-- <div class='col-md-3' style="padding-left: 0px;display:flex; align-items:center;"> -->
-                <div class='col-md-3' style="padding-left: 0px;">
-                  <img src="media/img/game.jpg" alt="sybil" style="width:100%; padding-bottom: 10px;" />
-                </div>
-                <div class='col-md-9'>
-                  <h3>Unity를 사용한 Shooting Game 만들기</h3>
-                  <h4>개인 프로젝트 / 6개월 / <a href="https://github.com/lubiksss/ShootingGame" target="_blank">github</a>
-                  </h4>
-                  <br />
-                  <p>
-                    스테이지와 Player, Enemy, Boss가 등장하는 일반적인 슈팅 게임을 모작, 게임 기획, Unity와 C#을 통한 게임 로직 구현, 게임 내 UI 구현
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행한 것</b>
-                    <li>Player 구현 (Move, Fire, Boom, 다른 객체와의 작용 등)</li>
-                    <li>Enemy 구현 (Move, Fire, 다른 객체와의 작용 등)</li>
-                    <li>Boss 구현 (보스 전용 4가지 패턴 구현)</li>
-                    <li>GameManager 구현 (전반적인 게임 관리, UI 관리 등)</li>
-                    <li>ObjectManager 구현 (ObjectPooling을 통한 관리)</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">수행 결과</b>
-                    <li>Android 빌드 후 배포 (.apk파일 github에 첨부)</li>
-                  </ul>
-                  </p>
-                  <p>
-                  <ul>
-                    <b style="font-size: 1.2em;">배운 것</b>
-                    <li>C#의 기본적인 문법과 객체지향프로그래밍의 개념</li>
-                    <li>Unity를 활용한 객체 간 참조, 컴포넌트 참조 등의 Unity 플랫폼 사용법</li>
-                    <li>디자인패턴(ObjectPool, Singleton)</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
+            <h3>지표 파이프라인</h3>
+            <p>
+            <ul>
+              <li>모델 아웃풋과 원천 데이터를 실시간 ETL 후 Druid 적재, BI 도구로 노출</li>
+              <li>처리량에 따라 Go 네이티브 어그리게이션과 Spark 어그리게이션 분리 적용</li>
+            </ul>
+            </p>
+            <table class="sys-spec">
+              <tr><th>목적</th><td>모델 아웃풋 데이터 실시간 처리, BI 도구로 모델러에게 제공</td></tr>
+              <tr><th>기술스택</th><td>Go, Scala, Spark, Kafka, Druid, Turnilo</td></tr>
+              <tr><th>인풋</th><td>Kafka 스트림 (최대 ~100k/s, 500MB/s), 하둡 파일 (하루 기준 최대 10TB)</td></tr>
+              <tr><th>아웃풋</th><td>Kafka 스트림, 하둡 파일</td></tr>
+              <tr><th>특이사항</th><td>Go 네이티브 어그리게이션, Spark 조인/어그리게이션</td></tr>
+            </table>
+            <div class="table-scroll">
+              <table class="sys-mod">
+                <thead>
+                  <tr>
+                    <th>모듈</th><th>목적</th><th>인풋</th><th>언어·프레임워크</th><th>ETL</th><th>아웃풋</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>익스트랙터</td>
+                    <td>노출·클릭·전환·입찰·낙찰 이벤트를 지표 스키마로 변환</td>
+                    <td>Kafka ~100k/s, 500MB/s</td>
+                    <td>Go, Scala, Spark</td>
+                    <td>파싱, 도메인 로직, 디멘전, 메트릭</td>
+                    <td>Kafka ~100k/s</td>
+                  </tr>
+                  <tr>
+                    <td>컴팩터</td>
+                    <td>디멘전 단위 사전 집계, 입찰·낙찰 스트림 통합 집계</td>
+                    <td>Kafka ~100k/s, 500MB/s × 2</td>
+                    <td>Go, Scala, Spark</td>
+                    <td>네이티브 어그리게이션, Spark 어그리게이션</td>
+                    <td>Kafka ~150k/s</td>
+                  </tr>
+                  <tr>
+                    <td>조이너</td>
+                    <td>입찰 로그에 어뷰징 판정 로그를 키 기준으로 결합</td>
+                    <td>Kafka ~100k/s, 500MB/s + ~1k/s, 400MB/s</td>
+                    <td>Scala, Spark</td>
+                    <td>Spark left-outer join</td>
+                    <td>Kafka ~100k/s</td>
+                  </tr>
+                  <tr>
+                    <td>BI 서버</td>
+                    <td>컨피그 기반 지표 수식 정의·조회 제공</td>
+                    <td>Druid 데이터 소스</td>
+                    <td>JavaScript</td>
+                    <td>컨피그 기반 수식, 로깅</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-
-
-
-
+          <div class="cv-item">
+            <h3>자동입찰 집계 파이프라인</h3>
+            <p>
+            <ul>
+              <li>자동입찰 광고의 노출·클릭·액션·전환·요청 이벤트를 실시간 집계 후 Druid 적재, 학습 API로 제공</li>
+              <li>JSONPath 인풋 스펙과 디멘전·메트릭 정의를 컨피그로 선언, 단일 잡 이미지로 7종 파이프라인 운영</li>
+              <li>파이프라인별 필터·매퍼·집계 전략을 strategy 패턴으로 분리, 헥사고날 구조로 Flink 의존을 도메인에서 격리</li>
+            </ul>
+            </p>
+            <table class="sys-spec">
+              <tr><th>목적</th><td>자동입찰 광고 이벤트의 실시간 집계 지표 산출 및 적재</td></tr>
+              <tr><th>기술스택</th><td>Kotlin, Flink, Kafka, Druid</td></tr>
+              <tr><th>인풋</th><td>Kafka 스트림 (최대 ~100k/s, 500MB/s)</td></tr>
+              <tr><th>아웃풋</th><td>Kafka 스트림, Druid</td></tr>
+              <tr><th>특이사항</th><td>컨피그 기반 파이프라인 선언, 5~30초 윈도우 집계, RocksDB 증분 체크포인트, 세이브포인트 무중단 업그레이드</td></tr>
+            </table>
+            <div class="table-scroll">
+              <table class="sys-mod">
+                <thead>
+                  <tr>
+                    <th>모듈</th><th>목적</th><th>인풋</th><th>언어·프레임워크</th><th>ETL</th><th>아웃풋</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>이벤트 어그리게이터</td>
+                    <td>노출·클릭·액션·전환 이벤트를 디멘전 단위 윈도우 집계</td>
+                    <td>Kafka ~100k/s, 500MB/s</td>
+                    <td>Kotlin, Flink</td>
+                    <td>JSONPath 파싱, 필터·매퍼, 윈도우 어그리게이션</td>
+                    <td>Kafka, Druid</td>
+                  </tr>
+                  <tr>
+                    <td>요청 어그리게이터</td>
+                    <td>광고그룹·버킷 단위 요청·입찰 수 집계</td>
+                    <td>Kafka ~100k/s, 500MB/s</td>
+                    <td>Kotlin, Flink</td>
+                    <td>파싱, flatten, 메모리 부분 집계, 윈도우 집계</td>
+                    <td>Kafka, Druid</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="cv-item">
+            <h3>웹 데이터 수집 파이프라인</h3>
+            <p>
+            <ul>
+              <li>의뢰마다 대상과 요구가 다른 웹 데이터 수집 파이프라인 38건 구축·납품, 만족도 100% (리뷰 31건 평점 5.0)</li>
+              <li>수집 런타임·관리 UI·CLI·배포 자동화를 템플릿으로 분리, 의뢰별 파생으로 반복 작업 제거</li>
+              <li>브라우저 자동화·데스크톱 실행·서버 스케줄 실행 세 가지 배포 형태를 대상 환경에 맞춰 선택</li>
+            </ul>
+            </p>
+            <table class="sys-spec">
+              <tr><th>목적</th><td>의뢰별 웹 데이터 수집 파이프라인 구축 및 납품</td></tr>
+              <tr><th>기술스택</th><td>TypeScript, Go, Next.js, Playwright, Puppeteer, Electron, Jest, GitHub Actions</td></tr>
+              <tr><th>인풋</th><td>대상 웹사이트 (부동산·커머스·경매·광고·소셜 등)</td></tr>
+              <tr><th>아웃풋</th><td>정형 데이터(XLSX·DB), 관리 UI, 알림</td></tr>
+              <tr><th>특이사항</th><td>템플릿 기반 파생 구축, 의뢰 38건 / 만족도 100% / 평점 5.0</td></tr>
+              <tr><th>링크</th><td><a class="ext" href="https://kmong.com/@lubiksss1" target="_blank">크몽 프로필</a></td></tr>
+            </table>
+            <div class="table-scroll">
+              <table class="sys-mod">
+                <thead>
+                  <tr>
+                    <th>모듈</th><th>목적</th><th>인풋</th><th>언어·프레임워크</th><th>ETL</th><th>아웃풋</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>수집 템플릿</td>
+                    <td>공통 수집 런타임·관리 UI·테스트 골격</td>
+                    <td>대상 웹사이트</td>
+                    <td>TypeScript, Next.js, Playwright</td>
+                    <td>브라우저 자동화, 파싱, 정제</td>
+                    <td>정형 데이터, 관리 UI</td>
+                  </tr>
+                  <tr>
+                    <td>CLI 템플릿</td>
+                    <td>스케줄 실행형 수집기 골격</td>
+                    <td>대상 웹사이트</td>
+                    <td>TypeScript, GitHub Actions</td>
+                    <td>파싱, 정제, 스케줄 실행</td>
+                    <td>정형 데이터</td>
+                  </tr>
+                  <tr>
+                    <td>병렬 수집 템플릿</td>
+                    <td>고동시성 수집기 골격</td>
+                    <td>대상 웹사이트</td>
+                    <td>Go</td>
+                    <td>goroutine 병렬 수집, 정제</td>
+                    <td>정형 데이터</td>
+                  </tr>
+                  <tr>
+                    <td>의뢰별 파생 파이프라인</td>
+                    <td>대상별 수집·정제·적재 구현 및 납품</td>
+                    <td>대상 웹사이트</td>
+                    <td>TypeScript, Next.js</td>
+                    <td>대상별 수집 전략, 도메인 로직</td>
+                    <td>정형 데이터, 알림</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
         </div>
       </div>
-      <!-- portfolio -->
+      <!-- .content - projects -->
 
-
-
-      <!-- .content - portfolio -->
       <!-- <div class="content cv-section">
         <div class="col-md-3">
           <h2>Education</h2>
