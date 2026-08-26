@@ -1,27 +1,25 @@
 <!DOCTYPE html>
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JoJaeDeok Portfolio</title>
-  <meta name="description" content="Classic CV, Resume - html template">
-  <meta name="keywords" content="Classic, CV, Resume, html template">
+  <title>조재덕 — Portfolio</title>
+  <meta name="description" content="조재덕 — MLOps 피처 스토어·데이터 파이프라인 엔지니어. 이력 및 담당 시스템.">
+  <meta name="keywords" content="조재덕, MLOps, 피처 스토어, 데이터 파이프라인, Feature Store, 이력서">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
-
   <!-- prod -->
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.1/magnific-popup.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/themes/themes.css">
   <link rel="stylesheet" href="css/demo.css">
   <!-- Projects section - system detail tables -->
   <style type="text/css">
+    /* 소셜 아이콘이 1개만 남아 템플릿의 192px 고정폭이 모바일에서 어긋난다 */
+    #header .social-box { width: auto; }
     #content a.ext { color: #1a0dab; text-decoration: underline;
       -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none; }
     #content a.ext:hover { color: #1a0dab !important; text-decoration: underline; }
@@ -59,7 +57,7 @@
 body{overflow:visible!important;}#loading{display:none !important;}</style>
 -->
   <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" href="cube_free.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 </head>
 
 <body>
@@ -79,16 +77,15 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
         </div>
         <div class="col-md-3 right">
           <div class="social-box">
-            <!-- <a href="#" class="facebook-icon" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="twitter-icon" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="googleplus-icon" target="_blank"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="linkedin-icon" target="_blank"><i class="fa fa-linkedin"></i></a> -->
-            <a href="https://github.com/lubiksss" class="github-icon" target="_blank"><i class="fa fa-github"></i></a>
+            <!-- <a href="#" class="facebook-icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter-icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="googleplus-icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin-icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a> -->
+            <a href="https://github.com/lubiksss" class="github-icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
           </div>
           <div class="contact-info">
             <p>
-              Email: lubiksss@gmail.com<br />
-              Phone: 010-8827-3865
+              Email: lubiksss@gmail.com
             </p>
           </div>
         </div>
@@ -124,13 +121,11 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
             <h4>2019.08 - 2020.12
             </h4>
             <!-- <br /> -->
-            <p>
             <ul>
               <li>반도체 소자 성능과 공정 아이템 간의 상관관계 분석, 전자물리에 기반한 공정 아이템 개발</li>
               <li>각 공장의 테이블을 자동으로 정리하는 시스템 구현 (python, pandas)</li>
 <!--               <li>제품의 품질, 신뢰성을 예측하는 모델 설계 (python, pytorch)</li> -->
             </ul>
-            </p>
           </div>
 
           <!-- <div class="cv-item">
@@ -142,29 +137,26 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           </div> -->
           <div class="cv-item">
             <h3>프리랜서 개발 (크몽)</h3>
-            <h4>2022.10 - 2023.03 / <a class="ext" href="https://kmong.com/@lubiksss1" target="_blank">크몽 프로필</a>
+            <h4>2022.10 - 2023.03
             </h4>
             <!-- <br /> -->
-            <p>
             <ul>
               <li>웹 데이터 수집 파이프라인 구축 의뢰 38건 수행, 만족도 100%, 리뷰 31건 평점 5.0</li>
               <li>수집 런타임·관리 UI·CLI·배포를 템플릿화하고 의뢰별로 파생시켜 구축 기간 단축</li>
               <li>대상별 수집 난이도(로그인, 동적 렌더링, 페이지네이션, 레이트 리밋)에 맞춘 수집 전략 구현</li>
             </ul>
-            </p>
           </div>
           <div class="cv-item">
             <h3>카카오 광고추천플랫폼트라이브</h3>
             <h4>2021.11 - 현재
             </h4>
             <!-- <br /> -->
-            <p>
             <ul>
               <li>광고 경매의 반응률(pctr) 예측을 뒷받침하는 MLOps 피처 스토어·데이터 파이프라인 개발·운영</li>
               <li>피처 스토어, 스트림 엔리처, 지표 파이프라인, 자동입찰 집계 파이프라인 4개 시스템 설계·구현</li>
-              <li>최대 100k/s · 500MB/s 스트림, 하루 30억 row · 10TB 규모 로그 처리</li>
+              <li>최대 100k/s · 500MB/s 스트림, 하루 30억 row · 10TB 규모 반응 로그 처리</li>
+              <li>데이터베이스 관리 방법 관련 특허 출원 1건 (2026)</li>
             </ul>
-            </p>
           </div>
         </div>
       </div>
@@ -176,22 +168,20 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
         <div class="col-md-10 sys-detail">
           <div class="cv-item">
             <h3>피처 스토어</h3>
-            <p>
             <ul>
               <li>ML 학습·추론용 피처의 생성·적재·서빙을 담당하는 실시간 피처 스토어의 전 모듈 설계·구현</li>
               <li>피처 카탈로그·라이프사이클·파티션 좌표를 포괄하는 도메인 모델 및 메타 스키마 설계</li>
               <li>카탈로그·라이프사이클을 소유하는 컨트롤 플레인과, 주입된 명세만으로 동작하는 무상태 실행기로 분리</li>
               <li>코드 배포 없이 메타 등록만으로 피처 추가</li>
               <li>gRPC 피처 서빙 평균 300k rps, 응답 10ms 내외</li>
-              <li>데이터베이스 관리 방법 관련 특허 출원 1건 (2026)</li>
             </ul>
-            </p>
             <table class="sys-spec">
               <tr><th>목적</th><td>ML 학습·추론용 피처의 생성·적재·서빙 및 라이프사이클 관리</td></tr>
               <tr><th>기술스택</th><td>Go, Kotlin, TypeScript, Spark, Kafka, Redis, MySQL, Hive, gRPC</td></tr>
               <tr><th>인풋</th><td>하둡 파일 (최대 1억 row, ~100GB), Kafka 스트림, gRPC 요청 (평균 300k rps)</td></tr>
               <tr><th>아웃풋</th><td>Redis Cluster, Kafka 스트림, gRPC 응답</td></tr>
               <tr><th>특이사항</th><td>컨트롤 플레인·실행기 분리, 상태머신 기반 라이프사이클, 네이티브 윈도우 집계, 스펙 주도 개발</td></tr>
+              <tr><th>링크</th><td><a class="ext" href="https://lubiksss.github.io/feature-store-console/" target="_blank" rel="noopener noreferrer">운영 콘솔 데모</a> — 피처 스토어 운영 콘솔의 정적 데모 (합성 샘플 데이터, 읽기 전용)</td></tr>
             </table>
             <div class="table-scroll">
               <table class="sys-mod">
@@ -222,7 +212,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>Kafka 이벤트의 윈도우 집계로 실시간 피처 생성</td>
                     <td>Kafka 스트림, 기존 집계 상태</td>
                     <td>Kotlin</td>
-                    <td>JsonPath 파싱, 네이티브 윈도우 집계, 키 샤딩</td>
+                    <td>JSONPath 파싱, 네이티브 윈도우 집계, 키 샤딩</td>
                     <td>KV 스토어, Kafka</td>
                   </tr>
                   <tr>
@@ -265,13 +255,11 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
 
           <div class="cv-item">
             <h3>스트림 엔리처</h3>
-            <p>
             <ul>
               <li>노출 시점 피처를 버저닝해 시계열 스토어에 선적재</li>
               <li>클릭이 노출보다 늦게 도착하는 사이 피처가 갱신·소멸, 선적재로 학습·추론 간 피처 시점 일치 보장</li>
               <li>조회 부하 절감을 위한 실시간 피처 캐싱, 스트림 조인은 네이티브 처리</li>
             </ul>
-            </p>
             <table class="sys-spec">
               <tr><th>목적</th><td>노출·클릭·전환 로그에 실시간으로 피처를 엔리칭해 학습·추론에 제공</td></tr>
               <tr><th>기술스택</th><td>Kotlin, Kafka, Cassandra, Redis</td></tr>
@@ -293,7 +281,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>Kafka ~100k/s, 500MB/s, Redis</td>
                     <td>Kotlin</td>
                     <td>캐싱, 조인, 싱킹, 로깅</td>
-                    <td>Cassandra</td>
+                    <td>Cassandra, Redis (중간 상태)</td>
                   </tr>
                 </tbody>
               </table>
@@ -302,18 +290,16 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
 
           <div class="cv-item">
             <h3>지표 파이프라인</h3>
-            <p>
             <ul>
-              <li>모델 아웃풋과 원천 데이터를 실시간 ETL 후 Druid 적재, BI 도구로 노출</li>
-              <li>처리량에 따라 Go 네이티브 어그리게이션과 Spark 어그리게이션 분리 적용</li>
+              <li>모델 아웃풋과 원천 데이터를 실시간 ETL해 Kafka로 발행, Druid를 거쳐 BI 도구로 노출</li>
+              <li>처리량에 따라 Go 네이티브 집계과 Spark 집계 분리 적용</li>
             </ul>
-            </p>
             <table class="sys-spec">
               <tr><th>목적</th><td>모델 아웃풋 데이터 실시간 처리, BI 도구로 모델러에게 제공</td></tr>
               <tr><th>기술스택</th><td>Go, Scala, Spark, Kafka, Druid, Turnilo</td></tr>
               <tr><th>인풋</th><td>Kafka 스트림 (최대 ~100k/s, 500MB/s), 하둡 파일 (하루 기준 최대 10TB)</td></tr>
               <tr><th>아웃풋</th><td>Kafka 스트림, 하둡 파일</td></tr>
-              <tr><th>특이사항</th><td>Go 네이티브 어그리게이션, Spark 조인/어그리게이션</td></tr>
+              <tr><th>특이사항</th><td>Go 네이티브 집계, Spark 조인/집계</td></tr>
             </table>
             <div class="table-scroll">
               <table class="sys-mod">
@@ -328,21 +314,21 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>노출·클릭·전환·입찰·낙찰 이벤트를 지표 스키마로 변환</td>
                     <td>Kafka ~100k/s, 500MB/s</td>
                     <td>Go, Scala, Spark</td>
-                    <td>파싱, 도메인 로직, 디멘전, 메트릭</td>
+                    <td>파싱, 도메인 로직, 디멘션, 메트릭</td>
                     <td>Kafka ~100k/s</td>
                   </tr>
                   <tr>
                     <td>컴팩터</td>
-                    <td>디멘전 단위 사전 집계, 입찰·낙찰 스트림 통합 집계</td>
+                    <td>디멘션 단위 사전 집계, 입찰·낙찰 스트림 통합 집계</td>
                     <td>Kafka ~100k/s, 500MB/s × 2</td>
                     <td>Go, Scala, Spark</td>
-                    <td>네이티브 어그리게이션, Spark 어그리게이션</td>
+                    <td>네이티브 집계, Spark 집계</td>
                     <td>Kafka ~150k/s</td>
                   </tr>
                   <tr>
                     <td>조이너</td>
-                    <td>입찰 로그에 어뷰징 판정 로그를 키 기준으로 결합</td>
-                    <td>Kafka ~100k/s, 500MB/s + ~1k/s, 400MB/s</td>
+                    <td>입찰 로그에 판정 로그를 키 기준으로 결합</td>
+                    <td>Kafka ~100k/s, 500MB/s + ~1k/s, 5MB/s</td>
                     <td>Scala, Spark</td>
                     <td>Spark left-outer join</td>
                     <td>Kafka ~100k/s</td>
@@ -361,13 +347,11 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           </div>
           <div class="cv-item">
             <h3>자동입찰 집계 파이프라인</h3>
-            <p>
             <ul>
-              <li>자동입찰 광고의 노출·클릭·액션·전환·요청 이벤트를 실시간 집계 후 Druid 적재, 학습 API로 제공</li>
-              <li>JSONPath 인풋 스펙과 디멘전·메트릭 정의를 컨피그로 선언, 단일 잡 이미지로 7종 파이프라인 운영</li>
+              <li>자동입찰 광고의 노출·클릭·액션·전환·요청 이벤트를 실시간 집계해 학습 데이터로 제공</li>
+              <li>JSONPath 인풋 스펙과 디멘션·메트릭 정의를 컨피그로 선언, 동일 잡 이미지를 컨피그로 인스턴스화해 7종 파이프라인 운영 (형태는 2종)</li>
               <li>파이프라인별 필터·매퍼·집계 전략을 strategy 패턴으로 분리, 헥사고날 구조로 Flink 의존을 도메인에서 격리</li>
             </ul>
-            </p>
             <table class="sys-spec">
               <tr><th>목적</th><td>자동입찰 광고 이벤트의 실시간 집계 지표 산출 및 적재</td></tr>
               <tr><th>기술스택</th><td>Kotlin, Flink, Kafka, Druid</td></tr>
@@ -385,10 +369,10 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                 <tbody>
                   <tr>
                     <td>이벤트 어그리게이터</td>
-                    <td>노출·클릭·액션·전환 이벤트를 디멘전 단위 윈도우 집계</td>
+                    <td>노출·클릭·액션·전환 이벤트를 디멘션 단위 윈도우 집계</td>
                     <td>Kafka ~100k/s, 500MB/s</td>
                     <td>Kotlin, Flink</td>
-                    <td>JSONPath 파싱, 필터·매퍼, 윈도우 어그리게이션</td>
+                    <td>JSONPath 파싱, 필터·매퍼, 윈도우 집계</td>
                     <td>Kafka, Druid</td>
                   </tr>
                   <tr>
@@ -405,20 +389,18 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
           </div>
           <div class="cv-item">
             <h3>웹 데이터 수집 파이프라인</h3>
-            <p>
             <ul>
               <li>의뢰마다 대상과 요구가 다른 웹 데이터 수집 파이프라인 38건 구축·납품, 만족도 100% (리뷰 31건 평점 5.0)</li>
               <li>수집 런타임·관리 UI·CLI·배포 자동화를 템플릿으로 분리, 의뢰별 파생으로 반복 작업 제거</li>
               <li>브라우저 자동화·데스크톱 실행·서버 스케줄 실행 세 가지 배포 형태를 대상 환경에 맞춰 선택</li>
             </ul>
-            </p>
             <table class="sys-spec">
               <tr><th>목적</th><td>의뢰별 웹 데이터 수집 파이프라인 구축 및 납품</td></tr>
               <tr><th>기술스택</th><td>TypeScript, Go, Next.js, Playwright, Puppeteer, Electron, Jest, GitHub Actions</td></tr>
               <tr><th>인풋</th><td>대상 웹사이트 (부동산·커머스·경매·광고·소셜 등)</td></tr>
               <tr><th>아웃풋</th><td>정형 데이터(XLSX·DB), 관리 UI, 알림</td></tr>
               <tr><th>특이사항</th><td>템플릿 기반 파생 구축, 의뢰 38건 / 만족도 100% / 평점 5.0</td></tr>
-              <tr><th>링크</th><td><a class="ext" href="https://kmong.com/@lubiksss1" target="_blank">크몽 프로필</a></td></tr>
+              <tr><th>링크</th><td><a class="ext" href="https://kmong.com/@lubiksss1" target="_blank" rel="noopener noreferrer">크몽 프로필</a></td></tr>
             </table>
             <div class="table-scroll">
               <table class="sys-mod">
@@ -468,23 +450,6 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
         </div>
       </div>
       <!-- .content - projects -->
-
-      <!-- <div class="content cv-section">
-        <div class="col-md-3">
-          <h2>Education</h2>
-        </div>
-        <div class="col-md-9">
-          <div class="cv-item">
-            <h3>Boston University</h3>
-            <h4>Graphic Design - 3.8 GPA</h4>
-            <br />
-            <p>Morbi in mi non velit dapibus tincidunt ut vel dolor. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos. Morbi elementum urna vitae justo vehicula, in lacinia magna
-              ornare. Aenean porttitor, quam quis fermentum consequat, eros lorem imperdiet lorem,.</p>
-          </div>
-        </div>
-      </div> -->
-      <!-- .content - education -->
     </div>
     <!-- #contnet -->
     <div id="footer">
