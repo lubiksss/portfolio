@@ -171,7 +171,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
             <ul>
               <li>ML 학습·추론용 피처의 생성·적재·서빙을 담당하는 실시간 피처 스토어의 전 모듈 설계·구현</li>
               <li>피처 카탈로그·라이프사이클·파티션 좌표를 포괄하는 도메인 모델 및 메타 스키마 설계</li>
-              <li>카탈로그·라이프사이클을 소유하는 컨트롤 플레인과, 주입된 명세만으로 동작하는 무상태 실행기로 분리</li>
+              <li>카탈로그·라이프사이클을 소유하는 컨트롤 플레인과, 주입된 명세만으로 동작하는 무상태 러너로 분리</li>
               <li>코드 배포 없이 메타 등록만으로 피처 추가</li>
               <li>gRPC 피처 서빙 평균 300k rps, 응답 10ms 내외</li>
             </ul>
@@ -180,7 +180,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
               <tr><th>기술스택</th><td>Go, Kotlin, TypeScript, Spark, Kafka, Redis, MySQL, Hive, gRPC</td></tr>
               <tr><th>인풋</th><td>하둡 파일 (최대 1억 row, ~100GB), Kafka 스트림, gRPC 요청 (평균 300k rps)</td></tr>
               <tr><th>아웃풋</th><td>Redis Cluster, Kafka 스트림, gRPC 응답</td></tr>
-              <tr><th>특이사항</th><td>컨트롤 플레인·실행기 분리, 상태머신 기반 라이프사이클, 네이티브 윈도우 집계, 스펙 주도 개발</td></tr>
+              <tr><th>특이사항</th><td>컨트롤 플레인·러너 분리, 상태머신 기반 라이프사이클, 네이티브 윈도우 어그리게이션, 스펙 주도 개발</td></tr>
               <tr><th>링크</th><td><a class="ext" href="https://lubiksss.github.io/feature-store-console/" target="_blank" rel="noopener noreferrer">운영 콘솔 데모</a> — 피처 스토어 운영 콘솔의 정적 데모 (합성 샘플 데이터, 읽기 전용)</td></tr>
             </table>
             <div class="table-scroll">
@@ -200,7 +200,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>K8s Job, MySQL</td>
                   </tr>
                   <tr>
-                    <td>배치 실행기</td>
+                    <td>배치 러너</td>
                     <td>주입된 명세로 피처 생성·적재·검증·정합성 검사 수행</td>
                     <td>잡 명세 JSON, 하둡 파일 최대 1억 row</td>
                     <td>Kotlin, Spark</td>
@@ -208,12 +208,12 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>하둡 파일, Kafka</td>
                   </tr>
                   <tr>
-                    <td>스트림 실행기</td>
-                    <td>Kafka 이벤트의 윈도우 집계로 실시간 피처 생성</td>
-                    <td>Kafka 스트림, 기존 집계 상태</td>
+                    <td>스트림 러너</td>
+                    <td>Kafka 이벤트의 윈도우 어그리게이션로 실시간 피처 생성</td>
+                    <td>Kafka ~100k/s, 기존 집계 상태</td>
                     <td>Kotlin</td>
-                    <td>JSONPath 파싱, 네이티브 윈도우 집계, 키 샤딩</td>
-                    <td>KV 스토어, Kafka</td>
+                    <td>JSONPath 파싱, 네이티브 윈도우 어그리게이션, 키 샤딩</td>
+                    <td>Redis Cluster, Kafka</td>
                   </tr>
                   <tr>
                     <td>운영 콘솔</td>
@@ -292,14 +292,14 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
             <h3>지표 파이프라인</h3>
             <ul>
               <li>모델 아웃풋과 원천 데이터를 실시간 ETL해 Kafka로 발행, Druid를 거쳐 BI 도구로 노출</li>
-              <li>처리량에 따라 Go 네이티브 집계과 Spark 집계 분리 적용</li>
+              <li>처리량에 따라 Go 네이티브 어그리게이션과 Spark 어그리게이션 분리 적용</li>
             </ul>
             <table class="sys-spec">
               <tr><th>목적</th><td>모델 아웃풋 데이터 실시간 처리, BI 도구로 모델러에게 제공</td></tr>
               <tr><th>기술스택</th><td>Go, Scala, Spark, Kafka, Druid, Turnilo</td></tr>
               <tr><th>인풋</th><td>Kafka 스트림 (최대 ~100k/s, 500MB/s), 하둡 파일 (하루 기준 최대 10TB)</td></tr>
               <tr><th>아웃풋</th><td>Kafka 스트림, 하둡 파일</td></tr>
-              <tr><th>특이사항</th><td>Go 네이티브 집계, Spark 조인/집계</td></tr>
+              <tr><th>특이사항</th><td>Go 네이티브 어그리게이션, Spark 조인/집계</td></tr>
             </table>
             <div class="table-scroll">
               <table class="sys-mod">
@@ -315,15 +315,15 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>Kafka ~100k/s, 500MB/s</td>
                     <td>Go, Scala, Spark</td>
                     <td>파싱, 도메인 로직, 디멘션, 메트릭</td>
-                    <td>Kafka ~100k/s</td>
+                    <td>Kafka</td>
                   </tr>
                   <tr>
                     <td>컴팩터</td>
                     <td>디멘션 단위 사전 집계, 입찰·낙찰 스트림 통합 집계</td>
                     <td>Kafka ~100k/s, 500MB/s × 2</td>
                     <td>Go, Scala, Spark</td>
-                    <td>네이티브 집계, Spark 집계</td>
-                    <td>Kafka ~150k/s</td>
+                    <td>네이티브 어그리게이션, Spark 어그리게이션</td>
+                    <td>Kafka</td>
                   </tr>
                   <tr>
                     <td>조이너</td>
@@ -331,15 +331,15 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>Kafka ~100k/s, 500MB/s + ~1k/s, 5MB/s</td>
                     <td>Scala, Spark</td>
                     <td>Spark left-outer join</td>
-                    <td>Kafka ~100k/s</td>
+                    <td>Kafka</td>
                   </tr>
                   <tr>
                     <td>BI 서버</td>
                     <td>컨피그 기반 지표 수식 정의·조회 제공</td>
                     <td>Druid 데이터 소스</td>
-                    <td>JavaScript</td>
+                    <td>JavaScript, 터닐로</td>
                     <td>컨피그 기반 수식, 로깅</td>
-                    <td>-</td>
+                    <td>터닐로 대시보드</td>
                   </tr>
                 </tbody>
               </table>
@@ -357,7 +357,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
               <tr><th>기술스택</th><td>Kotlin, Flink, Kafka, Druid</td></tr>
               <tr><th>인풋</th><td>Kafka 스트림 (최대 ~100k/s, 500MB/s)</td></tr>
               <tr><th>아웃풋</th><td>Kafka 스트림, Druid</td></tr>
-              <tr><th>특이사항</th><td>컨피그 기반 파이프라인 선언, 5~30초 윈도우 집계, RocksDB 증분 체크포인트, 세이브포인트 무중단 업그레이드</td></tr>
+              <tr><th>특이사항</th><td>컨피그 기반 파이프라인 선언, 5~30초 윈도우 어그리게이션, RocksDB 증분 체크포인트, 세이브포인트 무중단 업그레이드</td></tr>
             </table>
             <div class="table-scroll">
               <table class="sys-mod">
@@ -369,10 +369,10 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                 <tbody>
                   <tr>
                     <td>이벤트 어그리게이터</td>
-                    <td>노출·클릭·액션·전환 이벤트를 디멘션 단위 윈도우 집계</td>
+                    <td>노출·클릭·액션·전환 이벤트를 디멘션 단위 윈도우 어그리게이션</td>
                     <td>Kafka ~100k/s, 500MB/s</td>
                     <td>Kotlin, Flink</td>
-                    <td>JSONPath 파싱, 필터·매퍼, 윈도우 집계</td>
+                    <td>JSONPath 파싱, 필터·매퍼, 윈도우 어그리게이션</td>
                     <td>Kafka, Druid</td>
                   </tr>
                   <tr>
@@ -380,7 +380,7 @@ body{overflow:visible!important;}#loading{display:none !important;}</style>
                     <td>광고그룹·버킷 단위 요청·입찰 수 집계</td>
                     <td>Kafka ~100k/s, 500MB/s</td>
                     <td>Kotlin, Flink</td>
-                    <td>파싱, flatten, 메모리 부분 집계, 윈도우 집계</td>
+                    <td>파싱, flatten, 메모리 부분 어그리게이션, 윈도우 어그리게이션</td>
                     <td>Kafka, Druid</td>
                   </tr>
                 </tbody>
